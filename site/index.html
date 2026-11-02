@@ -29,15 +29,17 @@ header.top .wrap{display:flex;justify-content:space-between;align-items:center;h
 section{padding:56px 0 8px}
 .label{font-family:var(--sans);font-size:15px;letter-spacing:.02em;text-transform:uppercase;color:#c9c9c9;display:flex;gap:22px;align-items:baseline}
 .label i{font-style:normal;color:var(--lime);font-family:var(--sans)}
-h1{font-family:var(--head);font-weight:600;font-size:clamp(34px,5.4vw,64px);line-height:1.04;letter-spacing:-.035em;margin:26px 0 18px;max-width:20ch}
+h1{font-family:var(--head);font-weight:600;font-size:clamp(30px,4.4vw,52px);line-height:1.04;letter-spacing:-.035em;margin:26px 0 18px;max-width:26ch}
 h1 em{font-style:normal;color:var(--lime)}
 h2{font-family:var(--head);font-weight:600;font-size:clamp(26px,3.4vw,40px);letter-spacing:-.03em;line-height:1.1;margin:20px 0 14px}
+.kicker{font-size:19px;line-height:1.45;color:var(--ink);max-width:62ch;margin:-4px 0 18px}
+.kicker em{font-style:normal;color:var(--lime)}
 .lede{color:var(--ink2);font-size:17px;max-width:64ch;margin:0}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;position:relative;cursor:pointer;transition:border-color .15s,background .15s;text-align:left;color:inherit;font:inherit}
 .card:hover{border-color:var(--line2)}
 .card.on{border-color:#555;background:linear-gradient(180deg,#161616,#0b0b0b)}
-.card .cat{font-size:15px;font-weight:500;display:flex;justify-content:space-between;align-items:center}
+.card .cat{font-size:15px;font-weight:500;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .card .n{font-family:var(--head);font-weight:600;font-size:44px;letter-spacing:-.03em;line-height:1;margin:14px 0 6px;font-variant-numeric:tabular-nums}
 .card .sub{color:var(--ink2);font-size:13px;min-height:20px}
 .chip{font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:999px;border:1px solid var(--line2);color:var(--ink2);white-space:nowrap}
@@ -105,6 +107,7 @@ footer code{font-family:var(--mono);font-size:12px;color:var(--ink2)}
   <section>
     <div class="label"><i>01</i>This week</div>
     <h1 id="headline">Loading this week’s signal…</h1>
+    <p class="kicker" id="kicker"></p>
     <p class="lede">Policy notices, releases of the simulators Palatial exports to, funding, launches and research, pulled daily from live public feeds and sorted by keyword rules. Each count is compared with that category’s own 8-week average, so a busy week stands out from a normal one.</p>
     <div class="grid" id="cards"></div>
   </section>
@@ -143,7 +146,7 @@ footer code{font-family:var(--mono);font-size:12px;color:var(--ink2)}
     <h4>How it works</h4>
     <p>A GitHub Action runs <code>fetch.py</code> daily at 06:00 UTC and rebuilds this page. Items are sorted by keyword rules, and each row shows the rule that put it there. Rules are blunt: expect some irrelevant items and some misses.</p>
     <p>In production, the rules would be replaced by a language model that reads each item, writes a one-line summary, and scores relevance to Palatial’s roadmap and accounts. The feeds, baseline and drafting flow stay the same.</p>
-    <p>Baselines count only the sources with a full 9-week history (Federal Register, GitHub, Hacker News, arXiv). News RSS items appear in the feed but not in the counts, since those feeds only carry recent posts.</p>
+    <p>This week’s counts include every item in the feed. The 8-week norm adds up each feed’s own weekly average over the weeks it actually covers, so news feeds that only carry recent posts don’t inflate the comparison. Small counts are never called unusual.</p>
   </div>
   <div>
     <h4>Sources</h4>
@@ -156,7 +159,7 @@ footer code{font-family:var(--mono);font-size:12px;color:var(--ink2)}
 <script>
 (() => {
 const CATS = ["Policy","Release","Funding","Launch","Research","Market"];
-const BLURB = {Policy:"Federal Register notices and rules", Release:"Isaac Sim / Lab, MuJoCo, Newton, OpenUSD, Genesis", Funding:"Raises, rounds, acquisitions", Launch:"Product launches and partnerships", Research:"arXiv cs.RO: sim-to-real, digital twins, assets", Market:"Other robotics items"};
+const BLURB = {Policy:"Federal Register documents and policy news", Release:"Isaac Sim / Lab, MuJoCo, Newton, OpenUSD, Genesis", Funding:"Raises, rounds, acquisitions", Launch:"Product launches and partnerships", Research:"arXiv cs.RO: sim-to-real, digital twins, assets", Market:"Other robotics items"};
 const DEF_WATCH = ["Antioch","Lightwheel","Parallax Worlds","Hillbot","Scaled Foundations","Duality Robotics","Applied Intuition","Bifrost","World Labs","Omniverse","Cosmos"];
 const DEF_ACCT = ["Genesis AI","Origami Robotics","Innate","Gritt Robotics","Industrial Next"];
 const store = {
@@ -179,23 +182,31 @@ function hits(title, names){
 }
 function stats(c){
   const w = DATA.weekly[c] || Array(9).fill(0);
-  const base = w.slice(1).reduce((a,b)=>a+b,0) / 8;
+  const base = (DATA.baseline || {})[c] ?? w.slice(1).reduce((a,b)=>a+b,0) / 8;
   const now = w[0];
-  // Only call a week unusual when there is enough volume to mean something.
-  const ratio = base >= 1 && now >= 3 ? now / base : null;
+  // Compare like with like: only feeds that have a baseline count toward the ratio,
+  // and a week is only called unusual when there is enough volume to mean something.
+  const cmp = (DATA.now_comparable || {})[c] ?? now;
+  const ratio = base >= 1 && cmp >= 3 ? cmp / base : null;
   return {w, base, now, ratio};
 }
 function headline(){
   const s = Object.fromEntries(CATS.map(c => [c, stats(c)]));
-  const parts = [];
-  const pol = s.Policy.now, rel = s.Release.now;
-  if (pol) parts.push(`<em>${pol}</em> policy notice${pol>1?"s":""}`);
-  if (rel) parts.push(`<em>${rel}</em> simulator release${rel>1?"s":""}`);
-  let lead = parts.length ? parts.join(" and ") + " this week." : "A quiet week for policy and simulator releases.";
+  const wk = DATA.items.filter(it => ageDays(it.date) <= 7);
+  const short = (t, n) => { if (t.length <= n) return t; let x = t.slice(0, n).replace(/[\s,]+\S*$/, ""); while (/\s(and|of|the|their|to|for|into|in|on)$/i.test(x)) x = x.replace(/\s\S+$/, ""); return x.replace(/[,;:]$/, "") + "…"; };
+  // Lead with the most consequential item: a Federal Register document beats a news report of one.
+  const pol = wk.filter(it => it.category === "Policy").sort((a,b) => (b.source==="Federal Register") - (a.source==="Federal Register") || b.date.localeCompare(a.date))[0];
+  const rel = DATA.items.filter(it => it.category === "Release" && !it.flag).sort((a,b) => b.date.localeCompare(a.date))[0];
+  const relWk = wk.filter(it => it.category === "Release");
   const hot = CATS.filter(c => s[c].ratio && s[c].ratio >= 1.5).sort((a,b) => s[b].ratio - s[a].ratio)[0];
-  if (hot) lead += ` ${hot} is running <em>${s[hot].ratio.toFixed(1)}×</em> its 8-week norm.`;
-  else lead += " Everything else is within its normal range.";
-  return lead;
+  let h, k = [];
+  if (pol) { h = `New this week: <em>${esc(short(pol.title, 64))}</em>`; k.push(`${esc(pol.outlet)}, ${fmt(pol.date)}.`); }
+  else if (hot) h = `${hot} is running <em>${s[hot].ratio.toFixed(1)}×</em> its 8-week norm.`;
+  else h = "A quiet week: nothing above its 8-week norm.";
+  if (relWk.length) k.push(`${relWk.length} simulator release${relWk.length>1?"s":""} this week, latest ${esc(relWk[0].title)}.`);
+  else if (rel) k.push(`No simulator releases this week; last stable was ${esc(rel.title)} on ${fmt(rel.date)}.`);
+  if (pol && hot) k.push(`${hot} is running <em>${s[hot].ratio.toFixed(1)}×</em> its 8-week norm.`);
+  return [h, k.join(" ")];
 }
 function cards(){
   $("#cards").innerHTML = CATS.map(c => {
@@ -254,7 +265,8 @@ function draft(){
   $("#draft").value = out.trim() + "\n";
 }
 function render(){
-  $("#headline").innerHTML = headline();
+  const [h, k] = headline();
+  $("#headline").innerHTML = h; $("#kicker").innerHTML = k;
   cards(); rangesBar(); feed();
 }
 function initLists(){

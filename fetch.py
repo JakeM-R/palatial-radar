@@ -253,17 +253,43 @@ def fetch_arxiv(since):
 
 # ---------- baseline ----------
 def weekly(items):
-    """Counts per category for week 0 (last 7 days) and weeks 1-8 before it, deep sources only."""
+    """Week 0 (last 7 days) counts every item, so cards match the feed. Baseline is the sum,
+    over feeds, of each feed's average across the weeks it fully covers. A shallow RSS feed
+    that only reaches back 10 days adds to this week without being missing from the baseline."""
     cats = ["Policy", "Release", "Funding", "Launch", "Research", "Market"]
-    counts = {c: [0] * 9 for c in cats}
+    key = lambda it: it["outlet"] if it["source"] == "News" else it["source"]
+    def age(it):
+        return (NOW - datetime.fromisoformat(it["date"].replace("Z", "+00:00"))).days
+    oldest = {}
     for it in items:
-        if it["source"] not in DEEP_SOURCES or it["category"] not in counts:
+        oldest[key(it)] = max(oldest.get(key(it), 0), age(it))
+    # Deep sources are queried for the full window every run, so they cover all 9 weeks.
+    for it in items:
+        if it["source"] in DEEP_SOURCES:
+            oldest[key(it)] = 63
+    counts = {c: [0] * 9 for c in cats}
+    per = {}
+    for it in items:
+        c, w = it["category"], age(it) // 7
+        if c not in counts or not 0 <= w < 9:
             continue
-        age = (NOW - datetime.fromisoformat(it["date"].replace("Z", "+00:00"))).days
-        w = age // 7
-        if 0 <= w < 9:
-            counts[it["category"]][w] += 1
-    return counts
+        covered = w == 0 or oldest[key(it)] >= (w + 1) * 7
+        if covered:
+            counts[c][w] += 1
+        per.setdefault((c, key(it)), [0] * 9)[w] += 1
+    base, now_cmp = {}, {}
+    for c in cats:
+        total, now = 0.0, 0
+        for (cc, k), wk in per.items():
+            if cc != c:
+                continue
+            weeks = [i for i in range(1, 9) if oldest[k] >= (i + 1) * 7]
+            if len(weeks) >= 2:  # feeds without a baseline sit out of the comparison entirely
+                total += sum(wk[i] for i in weeks) / len(weeks)
+                now += wk[0]
+        base[c], now_cmp[c] = round(total, 2), now
+    coverage = {k: min(9, v // 7) for k, v in oldest.items()}
+    return counts, base, now_cmp, coverage
 
 
 def main():
@@ -293,7 +319,10 @@ def main():
     by_id.update({it["id"]: it for it in fresh})
     items = sorted(by_id.values(), key=lambda x: x["date"], reverse=True)
 
-    data = {"generated": iso(NOW), "sources": status, "weekly": weekly(items),
+    counts, base, now_cmp, coverage = weekly(items)
+    data = {"generated": iso(NOW), "sources": status, "weekly": counts, "baseline": base,
+            "now_comparable": now_cmp,
+            "coverage_weeks": coverage,
             "deep_sources": sorted(DEEP_SOURCES), "release_repos": RELEASE_REPOS,
             "fedreg_terms": FEDREG_TERMS, "items": items}
     with open(OUT, "w") as f:
