@@ -108,7 +108,6 @@ footer code{font-family:var(--mono);font-size:12px;color:var(--ink2)}
     <div class="label"><i>01</i>This week</div>
     <h1 id="headline">Loading this week’s signal…</h1>
     <p class="kicker" id="kicker"></p>
-    <p class="lede">Policy notices, releases of the simulators Palatial exports to, funding, launches and research, pulled daily from live public feeds and sorted by keyword rules. Each count is compared with that category’s own 8-week average, so a busy week stands out from a normal one.</p>
     <div class="grid" id="cards"></div>
   </section>
 
@@ -120,20 +119,20 @@ footer code{font-family:var(--mono);font-size:12px;color:var(--ink2)}
 
   <section>
     <div class="label"><i>03</i>Investor update</div>
-    <h2>Tick items with <span style="color:var(--lime)">+</span> to draft the market section.</h2>
+    <h2>Tick <span style="color:var(--lime)">+</span> to draft the update.</h2>
     <div class="two">
       <div class="panel">
         <h3>Market notes draft</h3>
-        <p>Grouped by category, one line per item with its link. Edit freely; ticks are saved in this browser.</p>
+        
         <textarea id="draft" spellcheck="false" placeholder="Nothing ticked yet."></textarea>
         <div class="bar" style="margin:12px 0 0"><button class="btn lime" id="copy">Copy</button><button class="btn" id="clear">Clear ticks</button><span class="note" id="copied"></span></div>
       </div>
       <div class="panel">
         <h3>Watchlists</h3>
-        <p>Items naming these companies get a badge and their own filter. One name per line, matched as a whole word. Saved in this browser.</p>
-        <label class="note" style="display:block;margin:0 0 6px">Watching: simulation and world-model companies (public defaults; replace with your own)</label>
+        <p>One name per line. Matches get a badge.</p>
+        <label class="note" style="display:block;margin:0 0 6px">Watching (defaults, replace with yours)</label>
         <textarea id="w-watch" rows="6" spellcheck="false"></textarea>
-        <label class="note" style="display:block;margin:12px 0 6px">Accounts: customers and partners listed on palatial.cloud</label>
+        <label class="note" style="display:block;margin:12px 0 6px">Accounts (from palatial.cloud)</label>
         <textarea id="w-acct" rows="5" spellcheck="false"></textarea>
         <div class="bar" style="margin:12px 0 0"><button class="btn" id="reset">Reset to defaults</button></div>
       </div>
