@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-02T09:21:36Z",
+ "generated": "2026-11-02T09:25:32Z",
  "sources": {
   "GitHub releases": 24,
   "Federal Register": 2,
   "News RSS": 25,
-  "Hacker News": 17,
+  "Hacker News": 21,
   "arXiv": 80
  },
  "weekly": {
   "Policy": [
-   1,
+   2,
    0,
    0,
    0,
@@ -31,8 +31,8 @@
    1
   ],
   "Funding": [
-   0,
-   0,
+   1,
+   1,
    0,
    0,
    0,
@@ -42,8 +42,8 @@
    1
   ],
   "Launch": [
+   4,
    1,
-   0,
    0,
    0,
    0,
@@ -64,16 +64,40 @@
    1
   ],
   "Market": [
+   11,
+   6,
+   5,
    1,
+   2,
    3,
    1,
-   0,
    2,
-   2,
-   1,
-   0,
    2
   ]
+ },
+ "baseline": {
+  "Policy": 0.12,
+  "Release": 3.0,
+  "Funding": 0.62,
+  "Launch": 0.88,
+  "Research": 9.62,
+  "Market": 5.38
+ },
+ "now_comparable": {
+  "Policy": 1,
+  "Release": 0,
+  "Funding": 0,
+  "Launch": 1,
+  "Research": 3,
+  "Market": 1
+ },
+ "coverage_weeks": {
+  "Federal Register": 9,
+  "The Robot Report": 0,
+  "Hacker News": 9,
+  "arXiv": 9,
+  "GitHub": 9,
+  "TechCrunch Robotics": 3
  },
  "deep_sources": [
   "Federal Register",
@@ -284,8 +308,8 @@
    "title": "Warp Sciences emerges from stealth, to apply robotics to drug research",
    "url": "https://www.therobotreport.com/warp-sciences-emerges-stealth-apply-robotics-drug-research/",
    "date": "2026-10-28T16:28:48Z",
-   "category": "Market",
-   "rule": "robotics terms, no funding/policy/launch match",
+   "category": "Launch",
+   "rule": "launch terms: \"emerges from stealth\"",
    "kind": "news"
   },
   {
@@ -373,9 +397,9 @@
    "url": "https://github.com/google-deepmind/mujoco/releases/tag/3.17.0",
    "date": "2026-10-22T21:45:20Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "89aab0109129",
@@ -385,9 +409,9 @@
    "url": "https://github.com/Genesis-Embodied-AI/genesis-world/releases/tag/v1.4.5",
    "date": "2026-10-22T21:38:18Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "4f5b96557617",
@@ -497,8 +521,8 @@
    "title": "Eka is worth $1.45B thanks to a physical AI model that has experts raving",
    "url": "https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving/",
    "date": "2026-10-20T13:00:00Z",
-   "category": "Market",
-   "rule": "robotics terms, no funding/policy/launch match",
+   "category": "Funding",
+   "rule": "funding / deal terms: \"worth $1.45B\"",
    "kind": "news"
   },
   {
@@ -509,9 +533,9 @@
    "url": "https://github.com/isaac-sim/IsaacLab/releases/tag/v3.0.0",
    "date": "2026-10-20T02:05:51Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "b657bbd1f782",
@@ -645,9 +669,9 @@
    "url": "https://github.com/newton-physics/newton/releases/tag/v1.7.0",
    "date": "2026-10-14T22:38:44Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "cd7a5f73887f",
@@ -668,9 +692,9 @@
    "url": "https://github.com/google-deepmind/mujoco/releases/tag/3.16.0",
    "date": "2026-10-14T09:29:02Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "49b2ee93f44f",
@@ -736,9 +760,9 @@
    "url": "https://github.com/newton-physics/newton/releases/tag/v1.7.0rc2",
    "date": "2026-10-13T20:03:43Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": "pre"
   },
   {
    "id": "46770a364886",
@@ -815,9 +839,9 @@
    "url": "https://github.com/Genesis-Embodied-AI/genesis-world/releases/tag/v1.4.4",
    "date": "2026-10-11T21:53:18Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "6f9e95372d07",
@@ -882,9 +906,9 @@
    "url": "https://github.com/newton-physics/newton/releases/tag/v1.7.0rc1",
    "date": "2026-10-08T05:40:58Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": "pre"
   },
   {
    "id": "78d84e86a4bc",
@@ -940,6 +964,18 @@
    "category": "Research",
    "rule": "arXiv cs.RO title: \"title term\"",
    "kind": "research"
+  },
+  {
+   "id": "40da8b56236e",
+   "source": "Hacker News",
+   "outlet": "humxn.io",
+   "title": "AI firm HUMXN offers free plumbing and HVAC service in Minnesota to train robots",
+   "url": "https://humxn.io/humxn-launches-free-home-service-program",
+   "date": "2026-10-07T15:28:49Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news",
+   "points": 38
   },
   {
    "id": "e6d8a8717d93",
@@ -1027,9 +1063,9 @@
    "url": "https://github.com/google-deepmind/mujoco/releases/tag/3.15.0",
    "date": "2026-10-05T14:58:18Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "2765cb62a357",
@@ -1396,9 +1432,9 @@
    "url": "https://github.com/google-deepmind/mujoco/releases/tag/3.14.0",
    "date": "2026-09-22T16:52:58Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "baea5a38523a",
@@ -1433,6 +1469,18 @@
    "category": "Research",
    "rule": "arXiv cs.RO title: \"digital twin\"",
    "kind": "research"
+  },
+  {
+   "id": "1cad66844ece",
+   "source": "Hacker News",
+   "outlet": "robot-daycare.com",
+   "title": "Motor Characterization for Small Running Robots (2016)",
+   "url": "https://robot-daycare.com/posts/2016-01-06-motor-characterization-for-small-running-robots/",
+   "date": "2026-09-21T23:27:31Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news",
+   "points": 51
   },
   {
    "id": "feecb0fa6d8a",
@@ -1565,7 +1613,7 @@
    "url": "https://github.com/isaac-sim/IsaacLab/releases/tag/v3.0.0-EA",
    "date": "2026-09-16T22:34:03Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release \u00b7 notes flag breaking changes",
    "kind": "release",
    "flag": "breaking"
   },
@@ -1579,6 +1627,18 @@
    "category": "Research",
    "rule": "arXiv cs.RO title: \"sim-to-real\"",
    "kind": "research"
+  },
+  {
+   "id": "efe3d9dc5fdb",
+   "source": "Hacker News",
+   "outlet": "spectrum.ieee.org",
+   "title": "AI Robots \u2013 When will they be in our homes",
+   "url": "https://spectrum.ieee.org/ai-robots",
+   "date": "2026-09-14T00:44:23Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news",
+   "points": 42
   },
   {
    "id": "621d5105d9d6",
@@ -1605,6 +1665,18 @@
    "flag": null
   },
   {
+   "id": "ddaf075d4dfc",
+   "source": "Hacker News",
+   "outlet": "dayzlegame.com",
+   "title": "I spent $220 on Google app ads and 60% of the installs were robots",
+   "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
+   "date": "2026-09-11T18:24:55Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news",
+   "points": 764
+  },
+  {
    "id": "d378938fc08c",
    "source": "GitHub",
    "outlet": "Newton",
@@ -1612,7 +1684,7 @@
    "url": "https://github.com/newton-physics/newton/releases/tag/v1.5.2",
    "date": "2026-09-11T07:42:34Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release \u00b7 notes flag breaking changes",
    "kind": "release",
    "flag": "breaking"
   },
@@ -1624,9 +1696,9 @@
    "url": "https://github.com/newton-physics/newton/releases/tag/v1.6.0",
    "date": "2026-09-10T14:37:28Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "944236f1fdcd",
@@ -1648,9 +1720,9 @@
    "url": "https://github.com/google-deepmind/mujoco/releases/tag/3.13.0",
    "date": "2026-09-09T15:03:05Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release",
    "kind": "release",
-   "flag": "breaking"
+   "flag": null
   },
   {
    "id": "1ca456b81bcb",
@@ -1693,7 +1765,7 @@
    "url": "https://github.com/Genesis-Embodied-AI/genesis-world/releases/tag/v1.4.0",
    "date": "2026-09-06T18:42:29Z",
    "category": "Release",
-   "rule": "GitHub release \u00b7 notes mention breaking/deprecation",
+   "rule": "GitHub release \u00b7 notes flag breaking changes",
    "kind": "release",
    "flag": "breaking"
   },
