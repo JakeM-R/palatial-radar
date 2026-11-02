@@ -62,13 +62,13 @@ RELEVANT = re.compile(
 RULES = [
     # (category, compiled regex, label shown on page)
     ("Funding", re.compile(r"\b(raises?|raised|funding|series [a-f]\b|seed round|pre-seed|"
-                           r"\$\s?\d+(\.\d+)?\s?(m|mn|million|b|bn|billion)\b|valuation|acquir\w+|acquisition|ipo)\b", re.I),
+                           r"\$\s?\d+(\.\d+)?\s?(m|mn|million|b|bn|billion)\b|valuation|valued at|worth \$\S+|acquir\w+|acquisition|ipo|spac)\b", re.I),
      "funding / deal terms"),
     ("Policy", re.compile(r"\b(tariff\w*|export control\w*|regulat\w*|ruling|section 232|commerce department|"
                           r"bureau of industry|nist|ai act|standard\w*|executive order|legislation|bill|ban)\b", re.I),
      "policy terms"),
     ("Launch", re.compile(r"\b(launch\w*|unveil\w*|introduc\w+|announc\w+|debut\w*|open[- ]sourc\w+|"
-                          r"releases?|now available|ships?|partners? with|partnership)\b", re.I),
+                          r"releases?|now available|ships?|partners? with|partnership|emerges? from stealth|starts? production)\b", re.I),
      "launch terms"),
 ]
 
@@ -136,8 +136,8 @@ def fetch_releases(since):
             pre = r.get("prerelease") or bool(re.search(r"(rc|alpha|beta|a\d|b\d)", tag, re.I))
             title = f'{name} {tag}' + (" (pre-release)" if pre else "")
             body = r.get("body") or ""
-            breaking = bool(re.search(r"breaking|deprecat|removed|migration", body, re.I))
-            rule = "GitHub release" + (" · notes mention breaking/deprecation" if breaking else "")
+            breaking = bool(re.search(r"breaking change|\bBREAKING\b|backwards?[- ]incompatible", body))
+            rule = "GitHub release" + (" · notes flag breaking changes" if breaking else "")
             it = make("GitHub", name, title, r["html_url"], when, "Release", rule, "release")
             it["flag"] = "breaking" if breaking else ("pre" if pre else None)
             out.append(it)

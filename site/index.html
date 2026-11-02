@@ -227,7 +227,7 @@ function feed(){
   if (!items.length) { $("#feed").innerHTML = `<div class="empty">Nothing in this view. Try a longer range.</div>`; return; }
   $("#feed").innerHTML = items.slice(0, shown).map(it => {
     const badges = [...it.w.map(n => `<span class="badge watch">${esc(n)}</span>`), ...it.a.map(n => `<span class="badge watch">account · ${esc(n)}</span>`)];
-    if (it.flag === "breaking") badges.push(`<span class="badge brk">breaking changes noted</span>`);
+    if (it.flag === "breaking") badges.push(`<span class="badge brk">notes flag breaking changes</span>`);
     if (it.flag === "pre") badges.push(`<span class="badge">pre-release</span>`);
     return `<div class="row"><div class="tag ${it.category}">${it.category}</div>
       <div><a class="t" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}</a>${badges.join("")}
