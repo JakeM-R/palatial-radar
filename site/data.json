@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-02T09:43:38Z",
+ "generated": "2026-11-03T13:23:15Z",
  "sources": {
   "GitHub releases": 24,
   "Federal Register": 2,
   "News RSS": 25,
-  "Hacker News": 17,
-  "arXiv": 80
+  "Hacker News": 15,
+  "arXiv": 82
  },
  "weekly": {
   "Policy": [
@@ -21,19 +21,19 @@
   ],
   "Release": [
    0,
-   4,
-   5,
-   4,
-   1,
+   3,
+   6,
+   2,
+   3,
    2,
    2,
    5,
    1
   ],
   "Funding": [
-   1,
-   1,
+   3,
    0,
+   1,
    0,
    0,
    0,
@@ -50,27 +50,27 @@
    0,
    0,
    1,
-   2
-  ],
-  "Research": [
-   3,
-   9,
-   9,
-   19,
-   16,
-   11,
-   9,
-   3,
    1
   ],
-  "Market": [
-   11,
-   6,
+  "Research": [
    5,
-   1,
+   7,
+   9,
+   15,
+   19,
+   11,
+   12,
    2,
+   2
+  ],
+  "Market": [
+   14,
    3,
+   8,
    1,
+   0,
+   4,
+   2,
    2,
    2
   ]
@@ -79,7 +79,7 @@
   "Policy": 0.12,
   "Release": 3.0,
   "Funding": 0.62,
-  "Launch": 0.88,
+  "Launch": 0.75,
   "Research": 9.62,
   "Market": 5.38
  },
@@ -88,14 +88,14 @@
   "Release": 0,
   "Funding": 0,
   "Launch": 1,
-  "Research": 3,
+  "Research": 5,
   "Market": 1
  },
  "coverage_weeks": {
-  "Federal Register": 9,
   "The Robot Report": 0,
-  "Hacker News": 9,
   "arXiv": 9,
+  "Federal Register": 9,
+  "Hacker News": 9,
   "GitHub": 9,
   "TechCrunch Robotics": 3
  },
@@ -123,6 +123,72 @@
   "autonomous systems"
  ],
  "items": [
+  {
+   "id": "c6aaa07507ce",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Churchill Capital XI shareholders approve $2.5B Agility Robotics humanoid SPAC",
+   "url": "https://www.therobotreport.com/agility-robotics-shareholders-approve-25b-humanoid-spac/",
+   "date": "2026-11-03T00:15:39Z",
+   "category": "Funding",
+   "rule": "funding / deal terms: \"SPAC\"",
+   "kind": "news"
+  },
+  {
+   "id": "560a9e06c437",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Tutor Intelligence raises Series B to scale model training, robot deployments",
+   "url": "https://www.therobotreport.com/tutor-intelligence-raises-series-b-to-scale-model-training-robot-deployments/",
+   "date": "2026-11-02T19:25:59Z",
+   "category": "Funding",
+   "rule": "funding / deal terms: \"raises\"",
+   "kind": "news"
+  },
+  {
+   "id": "53e175b9ffe3",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Gentherm designs ThermAffyx to protect, move patients during robotic surgeries",
+   "url": "https://www.therobotreport.com/gentherm-designs-thermaffyx-protect-move-patients-during-robotic-surgeries/",
+   "date": "2026-11-02T18:06:36Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "2f4c98c0c1d2",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Top 10 robotics developments of October 2026",
+   "url": "https://www.therobotreport.com/top-10-robotics-developments-october-2026/",
+   "date": "2026-11-02T17:56:42Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "af31f31e34d3",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "What AgTech founders get wrong about ROI",
+   "url": "https://www.therobotreport.com/what-agtech-founders-get-wrong-about-roi/",
+   "date": "2026-11-02T15:30:09Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "4ab6696dbaa7",
+   "source": "arXiv",
+   "outlet": "arXiv cs.RO",
+   "title": "KlaskTron-IL: A Contact-Rich Adversarial Imitation Learning Benchmark with a Validated Sim-to-Real Bridge",
+   "url": "http://arxiv.org/abs/2611.03091v1",
+   "date": "2026-11-02T13:11:21Z",
+   "category": "Research",
+   "rule": "arXiv cs.RO title: \"sim-to-real\"",
+   "kind": "research"
+  },
   {
    "id": "1b5b2bbab1c8",
    "source": "Federal Register",
@@ -189,6 +255,17 @@
    "category": "Market",
    "rule": "robotics terms, no funding/policy/launch match",
    "kind": "news"
+  },
+  {
+   "id": "92e421eaab11",
+   "source": "arXiv",
+   "outlet": "arXiv cs.RO",
+   "title": "A Reproducible Reconstruction and Evaluation Framework for Photorealistic Lunar Analog Scene Reconstruction Toward Digital Twins",
+   "url": "http://arxiv.org/abs/2611.00870v1",
+   "date": "2026-10-31T12:11:36Z",
+   "category": "Research",
+   "rule": "arXiv cs.RO title: \"digital twin\"",
+   "kind": "research"
   },
   {
    "id": "d632f17599f4",
@@ -266,7 +343,7 @@
    "category": "Launch",
    "rule": "launch terms: \"Launch\"",
    "kind": "news",
-   "points": 78
+   "points": 79
   },
   {
    "id": "d5f1609a995d",
