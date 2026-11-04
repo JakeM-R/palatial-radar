@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-03T13:23:15Z",
+ "generated": "2026-11-04T13:34:03Z",
  "sources": {
-  "GitHub releases": 24,
+  "GitHub releases": 25,
   "Federal Register": 2,
   "News RSS": 25,
-  "Hacker News": 15,
+  "Hacker News": 18,
   "arXiv": 82
  },
  "weekly": {
   "Policy": [
-   2,
+   3,
    0,
    0,
    0,
@@ -20,13 +20,13 @@
    0
   ],
   "Release": [
-   0,
+   1,
    3,
-   6,
-   2,
    3,
-   2,
-   2,
+   5,
+   3,
+   1,
+   3,
    5,
    1
   ],
@@ -50,53 +50,53 @@
    0,
    0,
    1,
-   1
+   0
   ],
   "Research": [
-   5,
-   7,
+   3,
+   6,
    9,
-   15,
-   19,
+   16,
+   20,
    11,
    12,
-   2,
-   2
+   1,
+   4
   ],
   "Market": [
    14,
-   3,
-   8,
    1,
+   7,
+   2,
    0,
-   4,
+   3,
+   3,
    2,
-   2,
-   2
+   1
   ]
  },
  "baseline": {
   "Policy": 0.12,
   "Release": 3.0,
   "Funding": 0.62,
-  "Launch": 0.75,
-  "Research": 9.62,
-  "Market": 5.38
+  "Launch": 0.62,
+  "Research": 9.88,
+  "Market": 4.25
  },
  "now_comparable": {
   "Policy": 1,
-  "Release": 0,
+  "Release": 1,
   "Funding": 0,
   "Launch": 1,
-  "Research": 5,
+  "Research": 3,
   "Market": 1
  },
  "coverage_weeks": {
-  "The Robot Report": 0,
+  "GitHub": 9,
+  "The Robot Report": 1,
   "arXiv": 9,
   "Federal Register": 9,
   "Hacker News": 9,
-  "GitHub": 9,
   "TechCrunch Robotics": 3
  },
  "deep_sources": [
@@ -124,6 +124,40 @@
  ],
  "items": [
   {
+   "id": "4941ee1db3a8",
+   "source": "GitHub",
+   "outlet": "Newton",
+   "title": "Newton v1.8.0rc1 (pre-release)",
+   "url": "https://github.com/newton-physics/newton/releases/tag/v1.8.0rc1",
+   "date": "2026-11-04T01:21:35Z",
+   "category": "Release",
+   "rule": "GitHub release",
+   "kind": "release",
+   "flag": "pre"
+  },
+  {
+   "id": "1968226c65bf",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Ben Waters on the latest wireless charging strategies",
+   "url": "https://www.therobotreport.com/ben-waters-on-the-latest-wireless-charging-strategies/",
+   "date": "2026-11-03T21:29:37Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "1a72d2dca6be",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "New ISO interoperability standard covers collaboration among mobile robots from multiple vendors",
+   "url": "https://www.therobotreport.com/new-iso-interoperability-standard-covers-collaboration-among-mobile-robots-from-multiple-vendors/",
+   "date": "2026-11-03T14:40:33Z",
+   "category": "Policy",
+   "rule": "policy terms: \"standard\"",
+   "kind": "news"
+  },
+  {
    "id": "c6aaa07507ce",
    "source": "News",
    "outlet": "The Robot Report",
@@ -149,7 +183,7 @@
    "id": "53e175b9ffe3",
    "source": "News",
    "outlet": "The Robot Report",
-   "title": "Gentherm designs ThermAffyx to protect, move patients during robotic surgeries",
+   "title": "Gentherm designs ThermAffyx to secure, heat patients during robotic surgeries",
    "url": "https://www.therobotreport.com/gentherm-designs-thermaffyx-protect-move-patients-during-robotic-surgeries/",
    "date": "2026-11-02T18:06:36Z",
    "category": "Market",
