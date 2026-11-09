@@ -1,16 +1,16 @@
 {
- "generated": "2026-11-08T12:32:29Z",
+ "generated": "2026-11-09T14:50:27Z",
  "sources": {
   "GitHub releases": 26,
   "Federal Register": 2,
   "News RSS": 27,
-  "Hacker News": 16,
+  "Hacker News": 11,
   "arXiv": 83
  },
  "weekly": {
   "Policy": [
-   2,
-   0,
+   1,
+   1,
    0,
    0,
    0,
@@ -20,15 +20,15 @@
    0
   ],
   "Release": [
-   2,
+   3,
    0,
    4,
-   6,
-   3,
+   5,
+   4,
    1,
    2,
    2,
-   6
+   5
   ],
   "Funding": [
    5,
@@ -49,53 +49,53 @@
    0,
    0,
    0,
-   1,
-   0
+   0,
+   1
   ],
   "Research": [
    3,
    5,
    8,
+   10,
+   17,
+   18,
    11,
-   19,
-   16,
-   11,
-   7,
-   3
+   9,
+   2
   ],
   "Market": [
-   16,
+   14,
    1,
-   6,
    5,
+   6,
    1,
    2,
    3,
-   2,
-   1
+   1,
+   2
   ]
  },
  "baseline": {
-  "Policy": 0.12,
-  "Release": 3.0,
+  "Policy": 0.25,
+  "Release": 2.88,
   "Funding": 0.33,
   "Launch": 0.58,
   "Research": 10.0,
   "Market": 4.08
  },
  "now_comparable": {
-  "Policy": 1,
-  "Release": 2,
+  "Policy": 0,
+  "Release": 3,
   "Funding": 1,
   "Launch": 1,
   "Research": 3,
   "Market": 1
  },
  "coverage_weeks": {
-  "The Robot Report": 1,
   "GitHub": 9,
-  "TechCrunch Robotics": 4,
+  "The Robot Report": 1,
   "arXiv": 9,
+  "TechCrunch Robotics": 4,
   "Federal Register": 9,
   "Hacker News": 9
  },
@@ -123,6 +123,29 @@
   "autonomous systems"
  ],
  "items": [
+  {
+   "id": "d3748b10c215",
+   "source": "GitHub",
+   "outlet": "Genesis",
+   "title": "Genesis v1.4.6",
+   "url": "https://github.com/Genesis-Embodied-AI/genesis-world/releases/tag/v1.4.6",
+   "date": "2026-11-08T21:56:48Z",
+   "category": "Release",
+   "rule": "GitHub release",
+   "kind": "release",
+   "flag": null
+  },
+  {
+   "id": "b7b5b0c76905",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "ARM Institute consortium grows to more than 500 organizations",
+   "url": "https://www.therobotreport.com/arm-institute-members-grows-more-than-500-organizations/",
+   "date": "2026-11-08T13:00:23Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
   {
    "id": "caccdd9152cf",
    "source": "News",
@@ -166,6 +189,17 @@
    "category": "Funding",
    "rule": "funding / deal terms: \"acquisition\"",
    "kind": "news"
+  },
+  {
+   "id": "64479904142e",
+   "source": "arXiv",
+   "outlet": "arXiv cs.RO",
+   "title": "Autonomous Particle Image Velocimetry Using Zero-Shot Sim-to-Real Reinforcement Learning",
+   "url": "http://arxiv.org/abs/2611.09679v1",
+   "date": "2026-11-06T16:27:25Z",
+   "category": "Research",
+   "rule": "arXiv cs.RO title: \"sim-to-real\"",
+   "kind": "research"
   },
   {
    "id": "1516eb0c44e8",
