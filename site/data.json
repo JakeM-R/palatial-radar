@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-09T14:50:27Z",
+ "generated": "2026-11-10T14:02:17Z",
  "sources": {
   "GitHub releases": 26,
   "Federal Register": 2,
-  "News RSS": 27,
-  "Hacker News": 11,
-  "arXiv": 83
+  "News RSS": 28,
+  "Hacker News": 13,
+  "arXiv": 0
  },
  "weekly": {
   "Policy": [
@@ -22,19 +22,19 @@
   "Release": [
    3,
    0,
-   4,
-   5,
-   4,
-   1,
+   3,
+   6,
+   2,
+   3,
    2,
    2,
    5
   ],
   "Funding": [
-   5,
+   3,
+   0,
    0,
    1,
-   0,
    0,
    0,
    0,
@@ -42,7 +42,7 @@
    0
   ],
   "Launch": [
-   2,
+   4,
    1,
    1,
    0,
@@ -55,23 +55,23 @@
   "Research": [
    3,
    5,
-   8,
-   10,
-   17,
-   18,
-   11,
+   7,
    9,
+   15,
+   18,
+   12,
+   12,
    2
   ],
   "Market": [
-   14,
+   15,
    1,
-   5,
-   6,
-   1,
-   2,
    3,
+   8,
    1,
+   0,
+   4,
+   2,
    2
   ]
  },
@@ -87,17 +87,17 @@
   "Policy": 0,
   "Release": 3,
   "Funding": 1,
-  "Launch": 1,
+  "Launch": 2,
   "Research": 3,
-  "Market": 1
+  "Market": 2
  },
  "coverage_weeks": {
-  "GitHub": 9,
-  "The Robot Report": 1,
-  "arXiv": 9,
   "TechCrunch Robotics": 4,
-  "Federal Register": 9,
-  "Hacker News": 9
+  "The Robot Report": 1,
+  "GitHub": 9,
+  "Hacker News": 9,
+  "arXiv": 9,
+  "Federal Register": 9
  },
  "deep_sources": [
   "Federal Register",
@@ -124,6 +124,61 @@
  ],
  "items": [
   {
+   "id": "c5e9e08f6438",
+   "source": "News",
+   "outlet": "TechCrunch Robotics",
+   "title": "Ring, known for its doorbell cameras, launches a home security drone and an enterprise security robot",
+   "url": "https://techcrunch.com/2026/11/10/ring-known-for-its-doorbell-cameras-launches-a-home-security-drone-and-an-enterprise-security-robot/",
+   "date": "2026-11-10T13:30:00Z",
+   "category": "Launch",
+   "rule": "launch terms: \"launches\"",
+   "kind": "news"
+  },
+  {
+   "id": "231c03db38be",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Axon invests $1.2B into Skydio and becomes its U.S. public safety distributor",
+   "url": "https://www.therobotreport.com/axon-invests-1-2b-into-skydio-and-becomes-its-u-s-public-safety-distributor/",
+   "date": "2026-11-10T13:06:58Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "8122ffda501d",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "NVIDIA launches GR00T 2 and Isaac Lab 3.0 at CoRL",
+   "url": "https://www.therobotreport.com/nvidia-launches-gr00t-2-isaac-lab-3-0-corl/",
+   "date": "2026-11-09T21:52:05Z",
+   "category": "Launch",
+   "rule": "launch terms: \"launches\"",
+   "kind": "news"
+  },
+  {
+   "id": "61ccb0e32798",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Boston Dynamics adds wheels to Atlas humanoid to test whole-body control",
+   "url": "https://www.therobotreport.com/boston-dynamics-adds-wheels-to-atlas-humanoid-to-test-whole-body-control/",
+   "date": "2026-11-09T18:34:38Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "a4599c070cc7",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "How to minimize Wi-Fi roaming interruptions for autonomous mobile robots",
+   "url": "https://www.therobotreport.com/how-minimize-wi-fi-roaming-interruptions-autonomous-mobile-robots/",
+   "date": "2026-11-09T15:40:41Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
    "id": "d3748b10c215",
    "source": "GitHub",
    "outlet": "Genesis",
@@ -145,6 +200,18 @@
    "category": "Market",
    "rule": "robotics terms, no funding/policy/launch match",
    "kind": "news"
+  },
+  {
+   "id": "e718c04c93cb",
+   "source": "Hacker News",
+   "outlet": "asia-tech-news.ghost.io",
+   "title": "China drafts lifetime ID codes for every robot it makes, not just humanoids",
+   "url": "https://asia-tech-news.ghost.io/china-drafts-lifetime-id-codes-for-every-robot-it-makes-not-just-humanoids/",
+   "date": "2026-11-07T17:52:16Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news",
+   "points": 18
   },
   {
    "id": "caccdd9152cf",
