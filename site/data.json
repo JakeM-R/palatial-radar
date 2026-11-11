@@ -1,16 +1,16 @@
 {
- "generated": "2026-11-10T14:02:17Z",
+ "generated": "2026-11-11T13:19:20Z",
  "sources": {
-  "GitHub releases": 26,
+  "GitHub releases": 27,
   "Federal Register": 2,
   "News RSS": 28,
-  "Hacker News": 13,
-  "arXiv": 0
+  "Hacker News": 16,
+  "arXiv": 83
  },
  "weekly": {
   "Policy": [
    1,
-   1,
+   3,
    0,
    0,
    0,
@@ -21,18 +21,18 @@
   ],
   "Release": [
    3,
-   0,
+   1,
    3,
-   6,
-   2,
    3,
-   2,
-   2,
+   5,
+   3,
+   1,
+   3,
    5
   ],
   "Funding": [
    3,
-   0,
+   3,
    0,
    1,
    0,
@@ -42,8 +42,8 @@
    0
   ],
   "Launch": [
+   5,
    4,
-   1,
    1,
    0,
    0,
@@ -53,50 +53,50 @@
    1
   ],
   "Research": [
-   3,
-   5,
-   7,
+   4,
+   4,
+   6,
    9,
-   15,
-   18,
+   16,
+   20,
+   11,
    12,
-   12,
-   2
+   1
   ],
   "Market": [
-   15,
+   17,
+   14,
    1,
-   3,
-   8,
-   1,
-   0,
-   4,
+   7,
    2,
+   0,
+   3,
+   3,
    2
   ]
  },
  "baseline": {
   "Policy": 0.25,
-  "Release": 2.88,
+  "Release": 3.0,
   "Funding": 0.33,
   "Launch": 0.58,
-  "Research": 10.0,
-  "Market": 4.08
+  "Research": 9.88,
+  "Market": 3.42
  },
  "now_comparable": {
   "Policy": 0,
   "Release": 3,
   "Funding": 1,
   "Launch": 2,
-  "Research": 3,
+  "Research": 4,
   "Market": 2
  },
  "coverage_weeks": {
-  "TechCrunch Robotics": 4,
-  "The Robot Report": 1,
+  "The Robot Report": 2,
   "GitHub": 9,
-  "Hacker News": 9,
+  "TechCrunch Robotics": 4,
   "arXiv": 9,
+  "Hacker News": 9,
   "Federal Register": 9
  },
  "deep_sources": [
@@ -123,6 +123,73 @@
   "autonomous systems"
  ],
  "items": [
+  {
+   "id": "ab9f5a3d1256",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Memories.ai builds standardized egocentric video pipeline",
+   "url": "https://www.therobotreport.com/memories-ai-builds-standardized-egocentric-video-pipeline/",
+   "date": "2026-11-11T13:00:34Z",
+   "category": "Policy",
+   "rule": "policy terms: \"standardized\"",
+   "kind": "news"
+  },
+  {
+   "id": "3269fa315fe5",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Can AI agents program industrial robots without training data? Berkeley says yes",
+   "url": "https://www.therobotreport.com/can-ai-agents-program-industrial-robots-without-training-data-berkeley-says-yes/",
+   "date": "2026-11-11T12:55:16Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "31a8a1ef16f0",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Dynamic Creatures partners with Sixth Wall Studio to bring Hasbro characters to life with robots",
+   "url": "https://www.therobotreport.com/dynamic-creatures-partners-sixth-wall-studio-bring-hasbro-characters-life-with-robots/",
+   "date": "2026-11-10T18:31:17Z",
+   "category": "Launch",
+   "rule": "launch terms: \"partners with\"",
+   "kind": "news"
+  },
+  {
+   "id": "2de9822bc9fb",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Why predictive maintenance matters more as factories add robots",
+   "url": "https://www.therobotreport.com/why-predictive-maintenance-matters-more-as-factories-add-robots/",
+   "date": "2026-11-10T16:13:40Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "ec5a5ff0578e",
+   "source": "GitHub",
+   "outlet": "Newton",
+   "title": "Newton v1.8.0rc2 (pre-release)",
+   "url": "https://github.com/newton-physics/newton/releases/tag/v1.8.0rc2",
+   "date": "2026-11-10T15:45:37Z",
+   "category": "Release",
+   "rule": "GitHub release",
+   "kind": "release",
+   "flag": "pre"
+  },
+  {
+   "id": "9e9a5853f7d7",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Intel and Altera expand collaboration to simplify sensor integration for physical AI",
+   "url": "https://www.therobotreport.com/intel-altera-expand-collaboration-simplify-sensor-integration-physical-ai/",
+   "date": "2026-11-10T14:47:10Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
   {
    "id": "c5e9e08f6438",
    "source": "News",
@@ -202,6 +269,28 @@
    "kind": "news"
   },
   {
+   "id": "8154dff7ff54",
+   "source": "arXiv",
+   "outlet": "arXiv cs.RO",
+   "title": "From Festival Video to the Stage: A Sim-to-Real Ladder for Long-Horizon Expressive Whole-Body Dance on a Commercial Humanoid",
+   "url": "http://arxiv.org/abs/2611.11127v1",
+   "date": "2026-11-08T04:30:08Z",
+   "category": "Research",
+   "rule": "arXiv cs.RO title: \"sim-to-real\"",
+   "kind": "research"
+  },
+  {
+   "id": "c9db29c281a7",
+   "source": "arXiv",
+   "outlet": "arXiv cs.RO",
+   "title": "SoftPAT3D: Physics-Augmented Text-to-3D Scene Generation with Deformables",
+   "url": "http://arxiv.org/abs/2611.11087v1",
+   "date": "2026-11-08T02:55:57Z",
+   "category": "Research",
+   "rule": "arXiv cs.RO title: \"scene generation\"",
+   "kind": "research"
+  },
+  {
    "id": "e718c04c93cb",
    "source": "Hacker News",
    "outlet": "asia-tech-news.ghost.io",
@@ -211,7 +300,7 @@
    "category": "Market",
    "rule": "robotics terms, no funding/policy/launch match",
    "kind": "news",
-   "points": 18
+   "points": 19
   },
   {
    "id": "caccdd9152cf",
