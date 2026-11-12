@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-11T13:19:20Z",
+ "generated": "2026-11-12T14:24:11Z",
  "sources": {
-  "GitHub releases": 27,
+  "GitHub releases": 25,
   "Federal Register": 2,
   "News RSS": 28,
-  "Hacker News": 16,
+  "Hacker News": 18,
   "arXiv": 83
  },
  "weekly": {
@@ -20,15 +20,15 @@
    0
   ],
   "Release": [
-   3,
+   5,
    1,
-   3,
+   2,
    3,
    5,
    3,
    1,
    3,
-   5
+   4
   ],
   "Funding": [
    3,
@@ -42,8 +42,8 @@
    0
   ],
   "Launch": [
-   5,
-   4,
+   6,
+   3,
    1,
    0,
    0,
@@ -53,23 +53,23 @@
    1
   ],
   "Research": [
-   4,
-   4,
+   3,
+   5,
    6,
+   7,
+   12,
+   24,
    9,
    16,
-   20,
-   11,
-   12,
    1
   ],
   "Market": [
-   17,
+   16,
    14,
-   1,
-   7,
-   2,
    0,
+   8,
+   1,
+   1,
    3,
    3,
    2
@@ -77,26 +77,26 @@
  },
  "baseline": {
   "Policy": 0.25,
-  "Release": 3.0,
+  "Release": 2.75,
   "Funding": 0.33,
   "Launch": 0.58,
-  "Research": 9.88,
-  "Market": 3.42
+  "Research": 10.0,
+  "Market": 3.75
  },
  "now_comparable": {
   "Policy": 0,
-  "Release": 3,
+  "Release": 5,
   "Funding": 1,
   "Launch": 2,
-  "Research": 4,
+  "Research": 3,
   "Market": 2
  },
  "coverage_weeks": {
   "The Robot Report": 2,
+  "Hacker News": 9,
   "GitHub": 9,
   "TechCrunch Robotics": 4,
   "arXiv": 9,
-  "Hacker News": 9,
   "Federal Register": 9
  },
  "deep_sources": [
@@ -123,6 +123,75 @@
   "autonomous systems"
  ],
  "items": [
+  {
+   "id": "d7547929d235",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Viam Launchpad aims to accelerate robotics deployments",
+   "url": "https://www.therobotreport.com/viam-launchpad-aims-to-accelerate-robotics-deployments/",
+   "date": "2026-11-12T13:30:31Z",
+   "category": "Launch",
+   "rule": "launch terms: \"Launchpad\"",
+   "kind": "news"
+  },
+  {
+   "id": "452d03a4295b",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Runway\u2019s Praxis-1 world action model for robotics is now available",
+   "url": "https://www.therobotreport.com/runways-praxis-1-world-action-model-for-robotics-is-now-available/",
+   "date": "2026-11-12T13:18:47Z",
+   "category": "Launch",
+   "rule": "launch terms: \"now available\"",
+   "kind": "news"
+  },
+  {
+   "id": "efe4ef346380",
+   "source": "Hacker News",
+   "outlet": "tomshardware.com",
+   "title": "Laser-armed AI submarine robots patrol Norwegian salmon farms, killing sea lice",
+   "url": "https://www.tomshardware.com/tech-industry/drones/3-500-ai-laser-robots-patrol-norwegian-salmon-farms-killing-sea-lice-parasites-get-zapped-by-high-tech-alternative-to-harsh-chemical-baths",
+   "date": "2026-11-11T18:44:23Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news",
+   "points": 33
+  },
+  {
+   "id": "b99acdfca3e5",
+   "source": "GitHub",
+   "outlet": "Newton",
+   "title": "Newton v1.8.0",
+   "url": "https://github.com/newton-physics/newton/releases/tag/v1.8.0",
+   "date": "2026-11-11T15:53:37Z",
+   "category": "Release",
+   "rule": "GitHub release",
+   "kind": "release",
+   "flag": null
+  },
+  {
+   "id": "66f82c32eabf",
+   "source": "GitHub",
+   "outlet": "MuJoCo",
+   "title": "MuJoCo 4.0.1",
+   "url": "https://github.com/google-deepmind/mujoco/releases/tag/4.0.1",
+   "date": "2026-11-11T15:47:30Z",
+   "category": "Release",
+   "rule": "GitHub release",
+   "kind": "release",
+   "flag": null
+  },
+  {
+   "id": "c65ae6b550d7",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Serve Robotics opens robot delivery network for others to build on",
+   "url": "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/",
+   "date": "2026-11-11T13:43:29Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
   {
    "id": "ab9f5a3d1256",
    "source": "News",
