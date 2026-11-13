@@ -1,38 +1,38 @@
 {
- "generated": "2026-11-12T14:24:11Z",
+ "generated": "2026-11-13T13:43:04Z",
  "sources": {
-  "GitHub releases": 25,
+  "GitHub releases": 23,
   "Federal Register": 2,
   "News RSS": 28,
-  "Hacker News": 18,
-  "arXiv": 83
+  "Hacker News": 14,
+  "arXiv": 86
  },
  "weekly": {
   "Policy": [
    1,
-   3,
+   2,
+   0,
    0,
    0,
    0,
    0,
    1,
-   0,
    0
   ],
   "Release": [
    5,
    1,
-   2,
-   3,
-   5,
+   0,
+   4,
+   6,
    3,
    1,
    3,
-   4
+   2
   ],
   "Funding": [
-   3,
-   3,
+   1,
+   5,
    0,
    1,
    0,
@@ -42,10 +42,10 @@
    0
   ],
   "Launch": [
-   6,
+   5,
    3,
    1,
-   0,
+   1,
    0,
    0,
    0,
@@ -53,50 +53,50 @@
    1
   ],
   "Research": [
-   3,
-   5,
+   6,
+   4,
    6,
    7,
+   11,
+   22,
    12,
-   24,
-   9,
-   16,
-   1
+   12,
+   6
   ],
   "Market": [
-   16,
-   14,
+   15,
+   15,
    0,
    8,
    1,
    1,
    3,
-   3,
-   2
+   2,
+   3
   ]
  },
  "baseline": {
   "Policy": 0.25,
-  "Release": 2.75,
-  "Funding": 0.33,
-  "Launch": 0.58,
+  "Release": 2.5,
+  "Funding": 0.67,
+  "Launch": 0.92,
   "Research": 10.0,
   "Market": 3.75
  },
  "now_comparable": {
   "Policy": 0,
   "Release": 5,
-  "Funding": 1,
-  "Launch": 2,
-  "Research": 3,
+  "Funding": 0,
+  "Launch": 1,
+  "Research": 6,
   "Market": 2
  },
  "coverage_weeks": {
   "The Robot Report": 2,
   "Hacker News": 9,
+  "arXiv": 9,
   "GitHub": 9,
   "TechCrunch Robotics": 4,
-  "arXiv": 9,
   "Federal Register": 9
  },
  "deep_sources": [
@@ -123,6 +123,28 @@
   "autonomous systems"
  ],
  "items": [
+  {
+   "id": "3a31ccef0c0d",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "How Rhoda AI is using video data to create generalized AI models for robots",
+   "url": "https://www.therobotreport.com/how-rhoda-ai-is-using-video-data-to-create-generalized-ai-models-for-robots/",
+   "date": "2026-11-13T13:30:44Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "44e4371cbc1e",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "NVIDIA replaces CEO amid China AI and robotics concerns",
+   "url": "https://www.therobotreport.com/nvidia-replaces-ceo-amid-china-ai-and-robotics-concerns/",
+   "date": "2026-11-12T16:33:17Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
   {
    "id": "d7547929d235",
    "source": "News",
@@ -155,7 +177,18 @@
    "category": "Market",
    "rule": "robotics terms, no funding/policy/launch match",
    "kind": "news",
-   "points": 33
+   "points": 34
+  },
+  {
+   "id": "e3b4f2f7aa29",
+   "source": "arXiv",
+   "outlet": "arXiv cs.RO",
+   "title": "Embedded Sim-to-Real Visual Servoing: Learned Reaching and Force-Guided Placement",
+   "url": "http://arxiv.org/abs/2611.15658v1",
+   "date": "2026-11-11T16:07:04Z",
+   "category": "Research",
+   "rule": "arXiv cs.RO title: \"sim-to-real\"",
+   "kind": "research"
   },
   {
    "id": "b99acdfca3e5",
@@ -180,6 +213,17 @@
    "rule": "GitHub release",
    "kind": "release",
    "flag": null
+  },
+  {
+   "id": "4a07e49fe315",
+   "source": "arXiv",
+   "outlet": "arXiv cs.RO",
+   "title": "Reading the Table: Sim-to-Real Game State Detection for the Chef's Hat Card Game",
+   "url": "http://arxiv.org/abs/2611.15524v1",
+   "date": "2026-11-11T14:14:19Z",
+   "category": "Research",
+   "rule": "arXiv cs.RO title: \"sim-to-real\"",
+   "kind": "research"
   },
   {
    "id": "c65ae6b550d7",
@@ -213,6 +257,17 @@
    "category": "Market",
    "rule": "robotics terms, no funding/policy/launch match",
    "kind": "news"
+  },
+  {
+   "id": "7148d8f0e7ac",
+   "source": "arXiv",
+   "outlet": "arXiv cs.RO",
+   "title": "Genie Sim Benchmark: Real-to-Sim Fidelity and Evaluation",
+   "url": "http://arxiv.org/abs/2611.15020v1",
+   "date": "2026-11-11T04:25:57Z",
+   "category": "Research",
+   "rule": "arXiv cs.RO title: \"real-to-sim\"",
+   "kind": "research"
   },
   {
    "id": "31a8a1ef16f0",
