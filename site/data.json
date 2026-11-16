@@ -1,17 +1,17 @@
 {
- "generated": "2026-11-15T13:14:31Z",
+ "generated": "2026-11-16T14:26:13Z",
  "sources": {
   "GitHub releases": 22,
   "Federal Register": 2,
   "News RSS": 28,
-  "Hacker News": 18,
-  "arXiv": 86
+  "Hacker News": 12,
+  "arXiv": 87
  },
  "weekly": {
   "Policy": [
    1,
-   2,
-   0,
+   1,
+   1,
    0,
    0,
    0,
@@ -20,12 +20,12 @@
    0
   ],
   "Release": [
-   4,
-   2,
+   3,
+   3,
    0,
    4,
-   6,
-   3,
+   5,
+   4,
    1,
    2,
    2
@@ -50,45 +50,45 @@
    0,
    0,
    0,
-   1
+   0
   ],
   "Research": [
-   3,
-   6,
+   4,
+   5,
    5,
    8,
+   10,
+   17,
+   18,
    11,
-   19,
-   16,
-   11,
-   7
+   9
   ],
   "Market": [
    13,
-   17,
+   15,
    1,
-   6,
    5,
+   6,
    1,
    2,
    3,
-   2
+   1
   ]
  },
  "baseline": {
   "Policy": 0.25,
-  "Release": 2.5,
+  "Release": 2.62,
   "Funding": 0.5,
-  "Launch": 0.75,
+  "Launch": 0.62,
   "Research": 10.38,
-  "Market": 3.75
+  "Market": 3.62
  },
  "now_comparable": {
   "Policy": 0,
-  "Release": 4,
+  "Release": 3,
   "Funding": 0,
   "Launch": 1,
-  "Research": 3,
+  "Research": 4,
   "Market": 2
  },
  "coverage_weeks": {
@@ -133,7 +133,7 @@
    "category": "Market",
    "rule": "robotics terms, no funding/policy/launch match",
    "kind": "news",
-   "points": 177
+   "points": 179
   },
   {
    "id": "471fb334b4f9",
@@ -167,6 +167,17 @@
    "category": "Market",
    "rule": "robotics terms, no funding/policy/launch match",
    "kind": "news"
+  },
+  {
+   "id": "8a06855bd89b",
+   "source": "arXiv",
+   "outlet": "arXiv cs.RO",
+   "title": "TouchTwin: Scaling Human Touch Data via Real-to-Sim-to-Real",
+   "url": "http://arxiv.org/abs/2611.17619v1",
+   "date": "2026-11-13T00:42:29Z",
+   "category": "Research",
+   "rule": "arXiv cs.RO title: \"sim-to-real\"",
+   "kind": "research"
   },
   {
    "id": "44e4371cbc1e",
