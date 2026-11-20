@@ -1,39 +1,39 @@
 {
- "generated": "2026-11-19T14:59:19Z",
+ "generated": "2026-11-20T14:41:32Z",
  "sources": {
   "GitHub releases": 22,
   "Federal Register": 2,
   "News RSS": 29,
-  "Hacker News": 19,
-  "arXiv": 91
+  "Hacker News": 13,
+  "arXiv": 86
  },
  "weekly": {
   "Policy": [
    1,
    1,
-   3,
+   2,
    0,
    0,
    0,
    0,
-   1,
-   0
+   0,
+   1
   ],
   "Release": [
    1,
    5,
    1,
-   2,
-   3,
-   5,
+   0,
+   4,
+   6,
    3,
    1,
    3
   ],
   "Funding": [
    5,
-   3,
-   3,
+   1,
+   5,
    0,
    1,
    0,
@@ -43,53 +43,53 @@
   ],
   "Launch": [
    0,
-   6,
+   5,
    3,
    1,
-   0,
+   1,
    0,
    0,
    0,
    0
   ],
   "Research": [
-   7,
-   7,
-   5,
+   6,
+   8,
+   4,
    6,
    7,
-   13,
-   24,
-   9,
-   15
+   12,
+   22,
+   12,
+   11
   ],
   "Market": [
-   14,
-   15,
+   13,
+   16,
    15,
    0,
    8,
    1,
    1,
    3,
-   3
+   2
   ]
  },
  "baseline": {
-  "Policy": 1.75,
+  "Policy": 1.25,
   "Release": 2.88,
   "Funding": 3.0,
   "Launch": 3.88,
-  "Research": 10.75,
-  "Market": 16.25
+  "Research": 10.25,
+  "Market": 16.62
  },
  "now_comparable": {
   "Policy": 1,
   "Release": 1,
   "Funding": 5,
   "Launch": 0,
-  "Research": 7,
-  "Market": 14
+  "Research": 6,
+  "Market": 13
  },
  "coverage_weeks": {
   "The Robot Report": 3,
@@ -124,6 +124,28 @@
  ],
  "items": [
   {
+   "id": "9886764f85e7",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "Robotics enters its post-Jensen Huang era",
+   "url": "https://www.therobotreport.com/robotics-enters-its-post-jensen-huang-era/",
+   "date": "2026-11-20T03:06:28Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "5b55dfee2458",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "What industrial drone deployments reveal about real-world autonomy challenges",
+   "url": "https://www.therobotreport.com/what-industrial-drone-deployments-reveal-about-real-world-autonomy-challenges/",
+   "date": "2026-11-19T17:01:55Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
    "id": "07f42e2b892c",
    "source": "News",
    "outlet": "The Robot Report",
@@ -155,7 +177,7 @@
    "category": "Market",
    "rule": "robotics terms, no funding/policy/launch match",
    "kind": "news",
-   "points": 32
+   "points": 34
   },
   {
    "id": "3f8cd905de10",
@@ -172,13 +194,13 @@
    "id": "7534063c1d3c",
    "source": "Hacker News",
    "outlet": "eleanorwiesler.com",
-   "title": "We taught robots to carve marble sculptures",
+   "title": "Teaching robots to carve marble sculptures",
    "url": "https://eleanorwiesler.com/blog/robotic-stone-carving/",
    "date": "2026-11-18T17:03:53Z",
    "category": "Market",
    "rule": "robotics terms, no funding/policy/launch match",
    "kind": "news",
-   "points": 57
+   "points": 126
   },
   {
    "id": "25f3323f6db1",
