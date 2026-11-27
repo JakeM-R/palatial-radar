@@ -1,40 +1,40 @@
 {
- "generated": "2026-11-26T16:07:43Z",
+ "generated": "2026-11-27T15:54:58Z",
  "sources": {
   "GitHub releases": 20,
   "Federal Register": 3,
   "News RSS": 29,
-  "Hacker News": 12,
-  "arXiv": 84
+  "Hacker News": 17,
+  "arXiv": 83
  },
  "weekly": {
   "Policy": [
    1,
    1,
    1,
-   3,
+   2,
    0,
    0,
    0,
    0,
-   1
+   0
   ],
   "Release": [
    1,
    1,
-   5,
-   1,
+   4,
    2,
-   3,
-   5,
+   0,
+   4,
+   6,
    3,
    1
   ],
   "Funding": [
    1,
    5,
-   3,
-   3,
+   1,
+   5,
    0,
    1,
    0,
@@ -44,29 +44,29 @@
   "Launch": [
    1,
    0,
-   6,
-   2,
-   2,
-   0,
+   5,
+   3,
+   1,
+   1,
    0,
    0,
    0
   ],
   "Research": [
-   8,
-   7,
-   7,
-   5,
    6,
    8,
-   11,
-   26,
-   9
+   8,
+   4,
+   6,
+   8,
+   12,
+   21,
+   13
   ],
   "Market": [
    10,
-   14,
-   15,
+   13,
+   16,
    15,
    0,
    8,
@@ -76,11 +76,11 @@
   ]
  },
  "baseline": {
-  "Policy": 1.38,
+  "Policy": 0.92,
   "Release": 2.62,
   "Funding": 3.47,
   "Launch": 2.73,
-  "Research": 9.88,
+  "Research": 10.0,
   "Market": 15.15
  },
  "now_comparable": {
@@ -88,16 +88,16 @@
   "Release": 1,
   "Funding": 1,
   "Launch": 1,
-  "Research": 8,
+  "Research": 6,
   "Market": 10
  },
  "coverage_weeks": {
   "The Robot Report": 4,
+  "Hacker News": 9,
   "arXiv": 9,
   "GitHub": 9,
   "Federal Register": 9,
-  "TechCrunch Robotics": 6,
-  "Hacker News": 9
+  "TechCrunch Robotics": 6
  },
  "deep_sources": [
   "Federal Register",
@@ -123,6 +123,29 @@
   "autonomous systems"
  ],
  "items": [
+  {
+   "id": "a350a6fd9ec6",
+   "source": "News",
+   "outlet": "The Robot Report",
+   "title": "GXO doubling down on robotics in 2027",
+   "url": "https://www.therobotreport.com/gxo-doubling-down-on-robotics-in-2027/",
+   "date": "2026-11-27T13:56:43Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news"
+  },
+  {
+   "id": "70b4bd8bd25c",
+   "source": "Hacker News",
+   "outlet": "economist.com",
+   "title": "Robots will have a staggering economic impact",
+   "url": "https://www.economist.com/leaders/2026/11/26/robots-will-have-a-staggering-economic-impact",
+   "date": "2026-11-26T11:15:03Z",
+   "category": "Market",
+   "rule": "robotics terms, no funding/policy/launch match",
+   "kind": "news",
+   "points": 22
+  },
   {
    "id": "d43a285e7545",
    "source": "News",
